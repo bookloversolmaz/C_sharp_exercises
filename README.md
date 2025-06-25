@@ -21,4 +21,4 @@ This is taken from Scott's Open-Source C# Role-Playing Ga[](https://soscsrpg.com
   * Player can save/load game
 
 ## Map of locations
-![](/Users/solmazpurser/RiderProjects/C_sharp_exercises/game_map.png)
+![](game_map.png)
