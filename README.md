@@ -1,5 +1,5 @@
 # C# role playing game
-This is taken from Scott's Open-Source C# Role-Playing Ga[](https://soscsrpg.com/)me.
+This is taken from Scott's Open-Source C# Role-Playing [Game](https://soscsrpg.com/).
 
 ## Features
 * User can create a player
