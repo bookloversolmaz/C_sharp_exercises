@@ -42,6 +42,7 @@ namespace Controller_based_API.Controllers
         }
 
         // PUT: api/Todo/5
+		// PUT updates and existing resource
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTodoItem(long id, TodoItem todoItem)
@@ -73,6 +74,7 @@ namespace Controller_based_API.Controllers
         }
 
         // POST: api/Todo
+		// Post creates a new resource
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<TodoItem>> PostTodoItem(TodoItem todoItem)
@@ -80,7 +82,9 @@ namespace Controller_based_API.Controllers
             _context.TodoItems.Add(todoItem);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetTodoItem", new { id = todoItem.Id }, todoItem);
+            // return CreatedAtAction("GetTodoItem", new { id = todoItem.Id }, todoItem);
+			// 
+			return CreatedAtAction(nameof(GetTodoItem), new { id = todoItem.Id }, todoItem);
         }
 
         // DELETE: api/Todo/5

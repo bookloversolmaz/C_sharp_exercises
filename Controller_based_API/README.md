@@ -1,6 +1,5 @@
 # Controller based web API
 A controller based web API program with ASP.NET Core from this [tutorial.](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-9.0&tabs=visual-studio)
-
 ## To do list
 First feature is a to do list that implements CRUD operations.
 

@@ -1,6 +1,10 @@
 @Controller_based_API_HostAddress = http://localhost:5263
 
-GET {{Controller_based_API_HostAddress}}/weatherforecast/
-Accept: application/json
+### Post a new Todo item
+POST https://localhost:5263/todoitems
+Content-Type: application/json
 
-###
+{
+  "name": "Walk the dog",
+  "isComplete": false
+}
