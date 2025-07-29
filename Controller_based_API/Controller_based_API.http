@@ -1,10 +1,12 @@
 @Controller_based_API_HostAddress = http://localhost:5263
 
 ### Post a new Todo item
-POST https://localhost:5263/todoitems
+POST {{Controller_based_API_HostAddress}}/api/todo
 Content-Type: application/json
 
 {
   "name": "Walk the dog",
   "isComplete": false
 }
+
+###
