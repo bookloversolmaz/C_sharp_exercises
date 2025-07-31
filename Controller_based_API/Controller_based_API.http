@@ -12,16 +12,15 @@ Content-Type: application/json
 @id=1
 GET {{Controller_based_API_HostAddress}}/api/todo/{{id}}
 ###
-[
     {
-        "id": 1,
-        "name": "walk dog",
-        "isComplete": true
+    "id": 1,
+    "name": "walk dog",
+    "isComplete": true
     }
-]
 ###
 PUT {{Controller_based_API_HostAddress}}/api/todo/1
 Content-Type: application/json
+
 {
     "id": 1,
     "name": "feed fish",
