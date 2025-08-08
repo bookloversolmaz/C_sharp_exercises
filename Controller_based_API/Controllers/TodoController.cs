@@ -24,7 +24,6 @@ namespace Controller_based_API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TodoItemDTO>>> GetTodoItems()
         {
-            // return await _context.TodoItems.ToListAsync();
             return await _context.TodoItems
                 .Select(x => ItemToDTO(x))
                 .ToListAsync();
