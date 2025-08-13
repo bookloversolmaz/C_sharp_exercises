@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Controller_based_API.Models;
+using Controller_based_API.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,10 @@ builder.Services.AddOpenApi();
 // Specifies that the database context will use an in-memory database.
 builder.Services.AddDbContext<TodoContext>(opt =>
     opt.UseInMemoryDatabase("TodoList"));
+
+builder.Services.AddTransient<ITodoRepository, TodoRepository>();
+// The DI container is initialized here, allowing services to be
+// registered and injected throughout the app.
 
 var app = builder.Build();
 

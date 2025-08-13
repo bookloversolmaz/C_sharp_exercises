@@ -11,3 +11,13 @@ First feature is a to do list that implements CRUD operations.
 | PUT /api/todoitems/{id}    | Update an existing item | To-do item	  | None                 |
 | DELETE /api/todoitems/{id} | Delete an item    	     | None	        | None                 |
 
+How the call chain works
+Controller → Calls _todoRepository.GetTodoItems() (through the ITodoRepository interface).
+
+Repository → TodoRepository.GetTodoItems() runs await _todoContext.TodoItems.ToListAsync().
+
+DbContext → TodoContext uses EF Core to execute SQL against the database table TodoItems.
+
+Result → The returned list of TodoItem entities is projected into DTOs and returned to the API client.
+
+![Diagram of above process](Images/Diagram.excalidraw)

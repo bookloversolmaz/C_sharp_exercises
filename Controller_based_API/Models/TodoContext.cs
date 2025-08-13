@@ -16,7 +16,7 @@ public class TodoContext : DbContext
         : base(options)
     {
     }
-    // DbSet tells EF core that TodoItem is an entity in the db and to map to the db table.
+    // DbSet tells EF core that TodoItem is an entity in the  db and to map to the db table.
     public DbSet<TodoItem> TodoItems { get; set; } = null!;
     
 }
